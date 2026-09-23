@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function MatchCard(props) {
   return (
     <div className="match-card">
@@ -10,7 +11,9 @@ function MatchCard(props) {
 
       <p>📅 {props.date}</p>
 
-      <button>Book Ticket</button>
+     <Link to="/booking">
+     <button>Book Ticket</button>
+     </Link>
 
     </div>
   );
@@ -34,6 +37,18 @@ function Matches() {
           team2="KKR"
           venue="Wankhede Stadium, Mumbai"
           date="28 March 2026"
+        />
+        <MatchCard
+          team1="CSK"
+          team2="DC"
+          venue="Sawai Mansingh Stadium, Jaipur"
+          date="28 March 2026"
+        />
+        <MatchCard
+          team1="RCB"
+          team2="RR"
+          venue="Arun Jaitley Stadium, Delhi"
+          date="20 April 2026"
         />
       </div>
 
